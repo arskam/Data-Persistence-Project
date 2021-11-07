@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  enteredName: {fileID: 878984719}
+  enteredName: {fileID: 1519886713}
 --- !u!4 &819952515
 Transform:
   m_ObjectHideFlags: 0
