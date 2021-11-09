@@ -4,15 +4,25 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-
 public class MenuManager : MonoBehaviour
 {
-    public string playerName;
+    public static MenuManager Instance;
+
     public Text enteredName;
 
-    public void OnTheNameSet()
+    private void Awake()
     {
-        playerName = enteredName.text;
-        MainManager.Instance.NameText = enteredName;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        Instance.enteredName = enteredName;
     }
+
+    
 }
