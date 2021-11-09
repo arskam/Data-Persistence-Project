@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     public static MenuManager Instance;
 
     public Text enteredName;
+    public string name;
 
     private void Awake()
     {
@@ -20,9 +21,10 @@ public class MenuManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        Instance.enteredName = enteredName;
     }
 
-    
+    public void OnNameSet()
+    {
+        name = enteredName.text;
+    }
 }

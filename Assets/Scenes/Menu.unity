@@ -550,8 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89d75974d5718642aed6534138bb599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
   enteredName: {fileID: 1519886713}
+  name: 
 --- !u!4 &819952515
 Transform:
   m_ObjectHideFlags: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 819952514}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: OnTheNameSet
+        m_MethodName: OnNameSet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

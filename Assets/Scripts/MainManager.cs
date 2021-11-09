@@ -19,6 +19,14 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
+    private void Awake()
+    {
+        if (MenuManager.Instance != null)
+        {
+            NameText.text = $"Best Score : {MenuManager.Instance.name} : {m_Points}";
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +44,7 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
-
-        if (MenuManager.Instance != null)
-        {
-            NameText = MenuManager.Instance.enteredName;
-        }
-    }
+  }
 
     private void Update()
     {
